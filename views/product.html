@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/product.css">
+
+    <!--Bootstrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!--Icons Fontawesome CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <title>Product</title>
+
+        <!--JS para el estado de la sesion-->
+        <script src="../Js/estadoSesion.js"></script>
+</head>
+
+<body>
+
+    <header class="d-none d-sm-block">DeCrochet, tu imaginacion en un tejido</header>
+
+
+        <!-- Barra de navegacion -->
+        <nav class="barranav">
+            <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
+                <!-- Input de busqueda en el catalogo -->
+                <div class="d-flex mt-3 w-25 d-none d-md-block">
+                    <div class="d-flex flex-row w-75 busqueda">
+                        <button class="btn d-flex justify-content-center border-0" type="submit">
+                            <i class="material-symbols-outlined ">Search</i>
+                        </button>
+                        <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                    </div>
+                </div>
+                <!-- Logo -->
+                <div class="container-fluid d-flex justify-content-center w-50">
+                    <a class="navbar-brand " href="./paginaPrincipal.html">
+                        <img src="../resources/logo/logo.png" width="270" height="100"
+                            class="d-inline-block align-top img-fluid" alt="">
+                    </a>
+                </div>
+                <!-- Botones  -->
+                <div class="d-flex flex-row align-items-center justify-content-end w-25">
+                    <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                        <a class="navbar-brand" id="btnCorazon" href="#">
+                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                        class="d-inline-block align-text-top"> -->
+                            <i class="material-symbols-outlined">Favorite</i>
+                        </a>
+                    </div>
+                    <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                        <a class="Person-icon" id="btnUser" href="#">
+                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                            <i class="material-symbols-outlined">Person</i>
+                        </a>
+                    </div>
+                    <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
+                        <a class="shopping-cart-icon" id="btnCarrito" href="#">
+                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                        class="d-inline-block align-text-top"> -->
+                            <i class="material-symbols-outlined">Shopping_Cart</i>
+                        </a>
+                    </div>
+                    <div class="d-flex ms-4 justify-content-start d-block d-md-none">
+                        <a class="menu-icon" href="#">
+                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                        class="d-inline-block align-text-top"> -->
+                            <button class="menucollapse" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"><i
+                                    class="material-symbols-outlined">Menu</i></button>
+                        </a>
+                    </div>
+                </div>
+                <!-- Este es el div que colapsa cuando la pantalla es de un movil -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <div class="container-fluid d-flex justify-content-center w-50">
+                            <a class="navbar-brand " href="#">
+                                <img src="../resources/logo/logo.png" width="270" height="100"
+                                    class="d-inline-block align-top img-fluid" alt="">
+                            </a>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="d-flex w-100">
+                        <div class="d-flex flex-row w-100 busqueda">
+                            <button class="btn d-flex justify-content-center border-0" type="submit">
+                                <i class="material-symbols-outlined ">Search</i>
+                            </button>
+                            <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                        </div>
+                    </div>
+                    <div class="d-flex ms-3 mt-3 justify-content-start">
+                        <a class="navbar-brand" id="btnDeseos" href="#">
+                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                        class="d-inline-block align-text-top"> -->
+                            <div class="letrasCanvas d-flex flex-row">
+                                <i class="material-symbols-outlined">Favorite</i>
+                                <p class="ms-3">Carrito de Compra</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex ms-3 mt-2 justify-content-start">
+                        <a class="navbar-brand" id="btnPerfil" href="#">
+                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                            <div class="letrasCanvas d-flex flex-row">
+                                <i class="material-symbols-outlined">Person</i>
+                                <p class="ms-3">Perfil</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex ms-3 mt-2 justify-content-start">
+                        <a class="navbar-brand" id="btnCompras" href="#">
+                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                        class="d-inline-block align-text-top"> -->
+                            <div class="letrasCanvas d-flex flex-row">
+                                <i class="material-symbols-outlined">Shopping_Cart</i>
+                                <p class="ms-3">Carrito de Compra</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-nav"></div>
+        </nav>
+        <!--Fin Navbar-->
+
+    <div class="container-fluid text-center product-container mt-3">
+        <div class="row">
+            <!-- <div class="col-md-1 col-img-thumbnail">
+                <div class="thumbnail mt-1">
+                    <img class="img-thumbnail" id="img-thumbnail-1"
+                        src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-animal-ballcirculo429066-087891113019552-167113_1200x.jpg?v=1689082628"
+                        alt="Imagen 1">
+                </div>
+                <div class="thumbnail mt-1">
+                    <img class="img-thumbnail" id="img-thumbnail-2"
+                        src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-animal-ballcirculo429066-097891113155588-876624_1200x.jpg?v=1689109116"
+                        alt="Imagen 2">
+                </div>
+                <div class="thumbnail mt-1">
+                    <img class="img-thumbnail" id="img-thumbnail-3"
+                        src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-animal-ballcirculo429066-107891113155595-184858_1200x.jpg?v=1689109116"
+                        alt="Imagen 3">
+                </div>
+                <div class="thumbnail mt-1">
+                    <img class="img-thumbnail" id="img-thumbnail-4"
+                        src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-animal-ballcirculo429066-117891113155656-954526_1200x.jpg?v=1689109116"
+                        alt="Imagen 4">
+                </div>
+            </div> -->
+
+            <!--Ruta antigua Amigurumi "https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-animal-ballcirculo429066-127891113155670-814922_1200x.jpg?v=1689109116" -->
+            <div class="col-md-6 col-img-main" style="display: flex; align-items: center; justify-content: end;">
+                <img class="img-product img-fluid" id="img-product" src="" alt="ControlPeleas" srcset="">
+            </div>
+            <div class="col-md-4 col-name-price-desc d-flex flex-column justify-content-evenly">
+                <div class="row product-name">
+                    <h1 id="productTitle">KITS AMIGURUMIS - COLECCIÓN ANIMAL BALL</h1>
+                </div>
+                <div class="d-flex flex-row product-price justify-content-center">
+                    <div class="h1 subtitulo">
+                        <h1 id="productprice">$400</h1>
+                    </div>
+                    <div class="ms-2">
+                        <i class="bi bi-heart" id="add_wishList"></i>
+                    </div>
+                </div>
+                <div class="row product-description justify-content-center mb-2">
+                    <p class="texto" id="pdescription">
+                        <!-- Acerca de este artículo
+                        Cada paquete viene con el material necesario para la confección de un amigurumi.
+
+                        Son cinco hermosos modelos a elegir: Unicornio, Dinosaurio, Zorro, Tigre y Oso.
+
+                        ¡Los amigurumis te van a encantar, es un excelente regalo para tejedores!
+
+                        Cada kit contiene:
+
+                        ◦ Madeja(s) de Amigurumi
+                        ◦ Ganchillo
+                        ◦ Aguja de tapicería
+                        ◦ Ojos para amigurumi
+                        ◦ Relleno
+                        ◦ Marcador de punto
+                        ◦ Instrucciones en español
+
+                        Tip: Evita tejer suelto o flojo, al meter el relleno no debe verse ni salirse, el material esta
+                        pensado para el tamaño indicado. -->
+                    </p>
+                </div>
+                <div class="row justify-content-center butons w-100">
+                    <div class="w-100 justify-content-center">
+                        <button id="add_cart" type="button" class="ms-4 btn btn-lg btn-cart w-auto">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-2">
+                    <div class="w-100 justify-content-center">
+                        <button id="buy-now" type="button" class="btn btn-lg btn-shop w-auto">Comprar Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 more-title">
+            <div class="col">
+                <h2>Mas Productos</h2>
+            </div>
+        </div>
+        <div class="d-flex flex-row tarjetasOtros justify-content-md-around overflow-x-auto" id="tarjetas">
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="align-self-center imagen">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-navidadcirculo429031-017891113110631-357991_1400x.jpg?v=1689082628"
+                        class="img-fluid h-100" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title">Otro Producto 1</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <p class="card-text more-price">$355.5</p>
+                        <a href="" class="w-50 align-self-center">Ver Más</a>
+                    </div>
+                </div>
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="align-self-center imagen">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-halloween-2023circulo436780-027891113161503-770550_1200x.jpg?v=1691093636"
+                        class="img-fluid h-100" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title">Otro Producto 2</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <p class="card-text more-price">$355.5</p>
+                        <a href="" class="w-50 align-self-center">Ver Más</a>
+                    </div>
+                </div>
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="align-self-center imagen">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-perros-y-gatoscirculo429040-017891113091565-533035_1200x.jpg?v=1689108929"
+                        class="img-fluid h-100" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title">Otro Producto 3</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <p class="card-text more-price">$355.5</p>
+                        <a href="" class="w-50 align-self-center texto">Ver Más</a>
+                    </div>
+                </div>
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="align-self-center imagen">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-navidad-2023circulo436836-017891113161633-752553_1200x.jpg?v=1691093638"
+                        class="img-fluid h-100" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title">Otro Producto 4</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <p class="card-text more-price">$355.5</p>
+                        <a href="" class="w-50 align-self-center">Ver Más</a>
+                    </div>
+                </div>
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="align-self-center imagen">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-pascuacirculo429813-017891113135825-852190_1200x.jpg?v=1689082625"
+                        class="img-fluid h-100" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title">Otro Producto 5</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <p class="card-text more-price">$355.5</p>
+                        <a href="" class="align-self-center">Ver Más</a>
+                    </div>
+                </div>
+        </div>
+        <div class="d-flex flex-row mt-5 reviews-title justify-content-center mb-5">
+            <button class="boton w-auto texto" data-bs-toggle="modal" data-bs-target="#ModalComments">Ver Comentarios</button>
+        </div>
+        <div class="modal fade" id="ModalComments" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Comentarios</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body overflow-y-auto contenedorComentarios" id="modal_comments">
+                  </div>
+                  <div class="modal-footer">
+                    <input class="form-control" type="text" placeholder="Dejanos un comentario" aria-label="default input example" id="commentValue">
+                    <button type="button" class="boton" id="comentarioPush">Dejar Comentario</button>
+                  </div>
+                </div>
+              </div>            
+        </div>
+        <!-- <div class="d-flex flex-column mt-3">
+            <div>
+                <h2>Dejanos tu comentario</h2>
+            </div>
+        </div> -->
+
+    </div>
+
+    <footer class="containerFooter-fluid">
+
+        <div class="redesFooter" >
+
+            <div class="saludoFooter">
+                Conoce mas sobre nosotros
+            </div>
+
+        </div>
+
+        <div class="iconosRedesFooter">
+            <a href="https://www.facebook.com/decrochetyotrostemas?mibextid=ZbWKwL">
+                <i class="fa-brands fa-facebook-f" id="facebook"></i>
+            </a>
+            <a href="https://instagram.com/decrochetyotrostemas?igshid=MzRlODBiNWFlZA==" class="fa-brands">
+                <i class="fa-brands fa-instagram" id="instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@decrochetyotrostemas?_t=8gBULPs0gWU&_r=1" class="fa-brands">
+                <i class="fa-brands fa-tiktok" id="tiktok"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=%2B5215561570426&data=ARBG9bdNItOy8fdSIV0HoeXrqp1NztDUdDspJprW3NShVEUAZILM8BnaEna13A5Hy7Tot-wjbFDCStJAQtLoJ_zPcSSki83t8lIreRGbqVtN6nhQpjTm1NB5LYKAjJxOS21SfGDpwcXAVTb5fIn_X5jV9g&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1KQ6433VzVVcAGzqzYfuudiASNiEumHT0PZx74qMdyYIsXxVvYTNIP4VM" class="fa-brands">
+                <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+            </a>
+        </div>
+        
+        <div class="cuerpoFooter">
+            <div class="logoFooter">
+                <img src="../resources/logo/logo.png" width="200px" alt="">
+                Tu imaginacion en un tejido
+            </div>
+
+            <div class="deCrochetFooter">
+                <h6 class="tituloFooter">
+                    DeCrochet
+                </h6>
+                <p>
+                    En deCrochet encontraras diferentes modelos de ropa, accesorios y amigurumis tejidos por las manos de Jani Arenas, quien se enorgullece de presentarte sus productos y agradece inmensamente tu visita.
+                    
+                </p>
+            </div>
+            <div class="linksFooter">
+                <!-- Links -->
+                <h6 class="tituloFooter">
+                    Terminos y Condiciones
+                </h6>
+                <p>
+                    <a href="https://www.youtube.com/channel/UCVcKV6KzBqDiItZph5cdPpg" class="text-reset">Videos de Tejido</a>
+                </p>
+                <p>
+                    <a href="https://www.facebook.com/decrochetyotrostemas/posts/pfbid02JMQ8nxa3ACAkFPWVyyvp6gJ74scBdfx7Zn6wrY5yCR2yETy2gRrsoAH88yxL859el" class="text-reset">Aviso Legal</a>
+                </p>
+                <p>
+                    <a href="#!" class="text-reset">Terminos de Servicio</a>
+                </p>
+                <p>
+                    <a href="#!" class="text-reset">Aviso De Privacidad</a>
+                </p>
+            </div>
+
+            <div class="contactoFooter">
+                <!-- Links -->
+                <h6 class="tituloFooter">Contacto</h6>
+
+                <p class="iconoTextoFooter">
+                    <i class="fas fa-print me-2" id="iconoComentario"></i> 
+                    <a href="sobreNosotros.html" id="comentarios">Conocenos</a>
+                </p>
+
+                <p>
+                    <i class="fas fa-home me-2" id="localizacion"></i> 
+                    Ciudad de México
+                </p>
+
+                <p>
+                <i class="fas fa-envelope me-2" id="correo"></i>
+                <a href="../views/contact.html" id="contactanos">Dejanos un comentario</a>
+                </p>
+                
+                <p>
+                    <i class="fas fa-phone me-2" id="telefono"></i> 
+                    5529334567
+                </p>
+                
+            </div>
+
+        </div>
+            
+        <div class="copyrightFooter">
+            copyright
+        </div>
+    </footer>
+
+    <script type="module" src="../js/product.js"></script>
+</body>
+
+</html>

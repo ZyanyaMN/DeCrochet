@@ -1,0 +1,265 @@
+header{
+  color: #FFDFE2;
+  background-color: #4964F3;
+  font-size: 20px;
+  padding: 8px;
+  text-align: center;
+  border: #FFDFE2 solid 3px;
+}
+
+/*Navbar*/
+.material-symbols-outlined {
+    color: #fda2ef;
+  }
+  
+  .busqueda {
+    border: #fda2ef;
+    border-radius: 20px;
+    border-style: solid;
+  }
+  
+  .menucollapse{
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .entrada:focus{
+    outline: none;
+  }
+  
+  .letrasCanvas{
+    color: #808080;
+  }
+  
+  .btn:hover {
+    color: #4964f3;
+  
+  }
+  
+  * {
+    font-family: 'Century Gothic', sans-serif;
+  
+  }
+  
+  .copy-footer {
+    background-color: #4964F3;
+    color: white;
+  }
+  
+  .footer-content {
+    color: black;
+  }
+  
+  .copy-footer {
+    color: white;
+  }
+  
+  .border-0{
+    border-radius: 100px;
+    width: 100px;
+  }
+
+   /*Fin Navbar*/
+
+.body{
+    font-family:'Century Gothic', sans-serif;
+}
+
+.tarjeta{
+    margin-top: 40px;
+    border: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: -10px 0px 10px #b2b2b2;
+}
+
+.tarjeta:hover{
+  box-shadow: -10px 0px 10px #b2b2b2;
+  animation: moverSombra 10s infinite alternate;
+}
+
+@keyframes moverSombra {
+  from {
+      box-shadow: -10px 0px 10px #4964F3;
+  }
+  to {
+      box-shadow: 10px 0px 10px #FDA2EF;
+  }
+
+}
+
+
+.titulo{
+    color:#EF5268;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.subtitulo{
+    color:#EF5268;
+    font-size: 30px;
+    text-align: start;
+    font-weight: 600;
+}
+
+.texto{
+    font-size: 20px;
+    text-align: start;
+    font-weight: 500;
+}
+
+.contenedorImagen{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.boton{
+    background-color: #4964f3;
+    color: white;
+    border-radius: 20px;
+    border-color: transparent;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.boton:hover{
+    background-color: #EF5268;
+    color: white;
+    border-radius: 20px;
+    border-color: transparent;
+}
+
+.parrafo{
+    font-size: 30px;
+    text-align: end;
+    margin-right: 50px;
+    color: #EF5268;
+    font-weight: 600;
+}
+
+
+.inputCantidadElementos{
+    border-radius: 20px;
+    border-color: #4964f3;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/*Footer*/
+.containerFooter-fluid{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family:'Century Gothic', sans-serif;
+  background-color: #4964F3;
+  color: white;
+  font-size: 15px;
+  margin-top: 35px;
+}
+
+.redesFooter{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.saludoFooter{
+  flex: 6;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.iconosRedesFooter{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  flex: 5;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+#facebook, #instagram, #tiktok, #whatsapp{
+  color: white;
+  font-size: 55px;
+}
+
+#facebook:hover, #instagram:hover, #tiktok:hover, #whatsapp:hover{
+  transform: scale(1.2);
+}
+
+.cuerpoFooter{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logoFooter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.deCrochetFooter{
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.linksFooter{
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.contactoFooter{
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+#comentarios {
+  text-decoration: none;
+  color: white;
+}
+
+#telefono, #correo, #localizacion, #iconoComentario, #contactanos{
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.tituloFooter{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.text-reset{
+  text-decoration: none;
+}
+
+.copyrightFooter{
+  background-color: #4964F3;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}

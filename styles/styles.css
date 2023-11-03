@@ -1,0 +1,96 @@
+/*Navbar*/
+.material-symbols-outlined {
+    color: #fda2ef;
+  }
+  
+  .busqueda {
+    border: #fda2ef;
+    border-radius: 20px;
+    border-style: solid;
+  }
+  
+  .menucollapse{
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .entrada:focus{
+    outline: none;
+  }
+  
+  .letrasCanvas{
+    color: #808080;
+  }
+  
+  .btn:hover {
+    color: #4964f3;
+  
+  }
+  
+  * {
+    font-family: 'Century Gothic', sans-serif;
+  
+  }
+  
+  .copy-footer {
+    background-color: #4964F3;
+    color: white;
+  }
+  
+  .footer-content {
+    color: black;
+  }
+  
+  .copy-footer {
+    color: white;
+  }
+  
+  .border-0{
+    border-radius: 100px;
+    width: 100px;
+  }
+
+   /*Fin Navbar*/
+   
+.contact-us {
+    color: palevioletred;
+}
+
+.redes {
+    color: #4964F3;
+    text-decoration: none;
+}
+
+.navbar-item,
+.main-item {
+    width: 100% !important;
+    height: 300px;
+}
+
+.footer-item {
+    width: 100% !important;
+    height: 700px !important;
+}
+
+.wrapper {
+    min-height: 100vh;
+    /* Establece el alto mínimo del wrapper al alto de la ventana del navegador */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-div iframe {
+    flex-grow: 1;
+    border: none;
+    /* Para eliminar el borde del iframe si lo deseas */
+}
+
+.img-product {
+    height: 400px;
+    width: 400px;
+}
